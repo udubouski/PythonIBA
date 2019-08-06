@@ -46,8 +46,14 @@ for N in range(1000, 5001, 1000):
     min = 1
     max = N
     A=[]
+    B=[]
+    C=[]
     for i in range (N):
-        A.append(int(round(random.random()*(max-min)+min)))
+        A.append(int(round(random.random() * (max-min)+min)))
+        # B.append(int(round(random.random() * (max - min) + min)))
+        # C.append(int(round(random.random() * (max - min) + min)))
+    B = A.copy()
+    C = A.copy()
 
     t1 = datetime.datetime.now()
     ShakerSort(A)
@@ -56,13 +62,13 @@ for N in range(1000, 5001, 1000):
     # print("Шейкерная сортировка " + str(N) + " заняла " + str((t2-t1).total_seconds()) + " cек ")
 
     t3 = datetime.datetime.now()
-    InsertSort(A)
+    InsertSort(B)
     t4 = datetime.datetime.now()
     y2.append((t4 - t3).total_seconds())
     # print("Сортировка вставками " + str(N) + " заняла " + str((t4 - t3).total_seconds()) + " cек ")
 
     t5 = datetime.datetime.now()
-    SelectSort(A)
+    SelectSort(C)
     t6 = datetime.datetime.now()
     y3.append((t6 - t5).total_seconds())
     # print("Сортировка выбором " + str(N) + " заняла " + str((t6 - t5).total_seconds()) + " cек ")
