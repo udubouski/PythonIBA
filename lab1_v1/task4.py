@@ -3,7 +3,7 @@ listA = []
 
 n = int(input("Input size of list: "))
 for i in range(n):
-    elem = random.random();
+    elem = random.random()
     listA.append(elem)
 
 print("ListA: ", listA)
