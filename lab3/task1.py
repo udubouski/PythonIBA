@@ -168,6 +168,7 @@ if proizvolniy !=0:
     print("Наибольший периметр = " + str(max(list_perimetr_proizvolniy)))
     print("Наименьший периметр = " + str(min(list_perimetr_proizvolniy)))
 
+print("")
 print("------------------------------\n")
 
 
